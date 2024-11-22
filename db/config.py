@@ -1,5 +1,4 @@
-from pydantic_settings import BaseSettings
-from pydantic import ConfigDict
+from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     database_hostname: str 
@@ -13,6 +12,8 @@ class Settings(BaseSettings):
     s3_bucket_name: str 
     google_api_key: str
 
-    model_config = ConfigDict(env_file=".env", extra="allow")
-
+    class config:
+        env_file=".env"
+        extra="allow"
+        
 settings = Settings()
