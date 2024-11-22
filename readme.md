@@ -99,3 +99,50 @@ pytest tests/
 - Validate and sanitize all inputs
 - Monitor and log application activities
 
+# PDF Chat Bot
+
+[Previous README content remains the same, with the following section added]
+
+## API Documentation
+
+### PDF Upload Endpoint
+- **URL**: `/upload`
+- **Method**: POST
+- **Content-Type**: multipart/form-data
+- **Parameters**:
+  - `file`: PDF file to upload (required)
+- **Response**:
+  ```json
+  {
+    "id": 123,
+    "filename": "document.pdf",
+    "message": "File successfully uploaded and text extracted."
+  }
+- **Errors**:
+  - 400: Invalid file type
+  - 429: Rate limit exceeded
+  - 500: Server error
+
+### WebSocket Question Endpoint
+- **URL**: `/ws/question`
+- **Protocol**: WebSocket
+- **Request Payload**:
+  ```json
+  {
+    "text_id": 123,
+    "question": "What is the main topic?"
+  }
+  ```
+- **Response Payload**:
+  ```json
+  {
+    "answer": "Detailed answer based on PDF content"
+  }
+- **Error Responses**:
+  - Rate limit exceeded
+  - Invalid message format
+  - PDF text not found
+
+### Rate Limiting
+- Maximum: 2 requests per 30 seconds
+- Excess requests result in temporary block
