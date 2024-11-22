@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     google_api_key: str
 
     class Config:
-    env_file = ".env"  # Specify the environment file
-    extra = "allow"  # Allow additional environment variables
+        env_file = ".env"  # Specify the environment file
+        extra = "allow"  # Allow additional environment variables
 
 settings = Settings()
