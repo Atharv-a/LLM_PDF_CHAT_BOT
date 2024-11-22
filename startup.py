@@ -23,7 +23,7 @@ async def startup_event(app: FastAPI):
     """
     # Setup Redis for rate limiting
     try:
-        redis = setup_redis()  # Call Redis setup function
+        redis = await setup_redis()  # Call Redis setup function
     except Exception as e:
         logger.error(f"Redis setup failed: {e}")
         raise e

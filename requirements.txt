@@ -1,13 +1,34 @@
-fastapi
+# Core framework
+fastapi[all] # Includes uvicorn, starlette, pydantic, etc.
 uvicorn
-pydantic
-sqlalchemy
+
+# Database-related
+SQLAlchemy
 psycopg2-binary
+pydantic
+pydantic_settings
+
+# Cloud and AWS
 boto3
-PyMuPDF
-python-dotenv
-langchain  
-langchain-google-genai
-google-generativeai
+
+# Machine Learning/Vector Stores
 faiss-cpu
+langchain
+langchain-community
+
+# Google APIs
+google-auth
+google-generativeai
+langchain-google-genai
+
+# Redis
+redis
 fastapi-limiter
+
+# Utilities and Extras
+python-dotenv
+PyMuPDF
+typing_extensions
+uvloop
+watchfiles
+
