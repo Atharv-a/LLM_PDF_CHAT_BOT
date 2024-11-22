@@ -11,7 +11,7 @@ s3_client = boto3.client(
     aws_access_key_id=settings.aws_access_key_id,
     aws_secret_access_key=settings.aws_secret_access_key,
     region_name=settings.s3_region_name,
-    endpoint_url="http://localhost:4566",  # LocalStack endpoint
+    endpoint_url=settings.aws_endpoint_url, 
 )
 
 def ensure_bucket_exists(bucket_name):
