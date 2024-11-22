@@ -8,10 +8,10 @@ class Settings(BaseSettings):
     database_username: str 
     aws_access_key_id: str
     aws_secret_access_key: str
+    aws_endpoint_url: str
     s3_region_name: str
     s3_bucket_name: str 
     google_api_key: str
-
     class config:
         env_file=".env"
         extra="allow"
