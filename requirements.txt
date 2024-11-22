@@ -8,7 +8,7 @@ cryptography==41.0.0
 dnspython==2.3.0
 ecdsa==0.18.0
 email-validator==2.0.0.post2
-fastapi==0.95.2
+fastapi
 greenlet==2.0.2
 h11==0.14.0
 httpcore==0.17.2
