@@ -86,12 +86,12 @@ pytest tests/
 - More robust error handling
 - Advanced semantic search capabilities
 
-## License
+<!-- ## License
 [Specify your license]
 
 ## Contributing
 [Add contribution guidelines]
-```
+``` -->
 
 ## Security Considerations
 - Use environment-specific configurations
