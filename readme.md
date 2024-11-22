@@ -83,7 +83,6 @@ pytest tests/
 ## Future Improvements
 - Multi-document support
 - Enhanced authentication
-- More robust error handling
 - Advanced semantic search capabilities
 
 <!-- ## License
@@ -98,10 +97,6 @@ pytest tests/
 - Implement proper authentication
 - Validate and sanitize all inputs
 - Monitor and log application activities
-
-# PDF Chat Bot
-
-[Previous README content remains the same, with the following section added]
 
 ## API Documentation
 
